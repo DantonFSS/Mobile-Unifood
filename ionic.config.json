@@ -1,0 +1,7 @@
+{
+  "name": "UnifoodMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
