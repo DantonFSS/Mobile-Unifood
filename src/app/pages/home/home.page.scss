@@ -1,27 +1,116 @@
-#container {
+/* Estilo geral */
+.main-container {
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Seção de Busca */
+.search-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-section ion-icon {
+  font-size: 24px;
+  color: #888;
+  margin-right: 8px;
+}
+
+.search-section .address {
+  margin-left: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Ofertas */
+.offers-section {
+  margin-bottom: 24px;
+}
+
+.offers-section .offers-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Categorias */
+.categories-section {
+  margin-bottom: 100px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-item {
+  flex: 1 0 21%; /* Responsividade para 4 itens por linha */
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 100px;
+  border: solid;
+  border-color: var(--ion-color-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 55px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.category-icon {
+  font-size: 32px;
+  color: #ff6347;
+  margin-bottom: 8px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.category-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
 }
 
-#container a {
-  text-decoration: none;
+/* Pertinho de Você */
+.near-you-section {
+  margin-bottom: 24px;
 }
+
+.near-you-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.near-you-item {
+  flex: 0 0 auto;
+  width: 120px;
+  text-align: center;
+}
+
+.near-you-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+ion-toolbar {
+  --background: var(--ion-color-tertiary); /* Header usa a cor primária */
+  color: white;
+}
+
+ion-tab-bar {
+  --background: var(--ion-color-primary); /* Menu inferior usa a cor secundária */
+  --color: white;
+}
+
+ion-tab-button {
+  --color-selected: var(--ion-color-tertiary); /* Ícone selecionado usa a cor terciária */
+}
+
+ion-button {
+  --background: var(--ion-color-tertiary); /* Botões chamativos usam a cor terciária */
+  --color: white;
+}
+

@@ -1,21 +1,59 @@
-<ion-header>
-  <ion-toolbar style="color: var(--color-primary);">
-    <ion-title>Tela Inicial</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <h2>Bem-vindo ao Unifood!</h2>
-  <ion-button routerLink="/announce">Anunciar Produto</ion-button>
-  <ion-button routerLink="/map">Ver Localizações</ion-button>
+  <div class="main-container">
 
-  <ion-content>
-    <div class="content">
-      haha
+    <div class="search-section">
+      <ion-searchbar placeholder="Buscar"></ion-searchbar>
     </div>
-  </ion-content>
+    <p class="address">📍 Endereço</p>
+
+    <div class="offers-section">
+      <h2 class="section-title">Ofertas</h2>
+      <img src="assets/images/Ofertas.png" alt="Ofertas de hoje" class="offers-image" />
+    </div>
+
+    <section class="categories-section">
+      <h2 class="section-title">Categorias</h2>
+      <div class="categories">
+        <div class="category-item" *ngFor="let category of categories">
+          <img [src]="category.image" [alt]="category.name" class="category-image" />
+          <p class="category-name">{{ category.name }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="near-you-section">
+      <h2 class="section-title">Pertinho de você</h2>
+      <div class="near-you-carousel">
+        <div class="near-you-item" *ngFor="let item of nearYouItems">
+          <img [src]="item.image" [alt]="item.alt" class="near-you-image" />
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="secondary">
+      <ion-tab-button tab="home" routerLink="/home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Início</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="search" routerLink="/map">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-label>Busca</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="sell" routerLink="/announce">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <ion-label>Quero Vender!</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="messages">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+        <ion-label>Mensagens</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="cart" routerLink="/cart">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-label>Carrinho</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>
-
-
-
-
