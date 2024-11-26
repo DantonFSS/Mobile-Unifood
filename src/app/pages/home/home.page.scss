@@ -1,11 +1,11 @@
-/* Estilo geral */
+
 .main-container {
   padding: 16px;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
 }
 
-/* Seção de Busca */
+
 .search-section {
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
   color: #666;
 }
 
-/* Ofertas */
+
 .offers-section {
   margin-bottom: 24px;
 }
@@ -34,7 +34,7 @@
   border-radius: 8px;
 }
 
-/* Categorias */
+
 .categories-section {
   margin-bottom: 100px;
 }
@@ -47,7 +47,7 @@
 }
 
 .category-item {
-  flex: 1 0 21%; /* Responsividade para 4 itens por linha */
+  flex: 1 0 21%; 
   text-align: center;
   background-color: #fff;
   padding: 8px;
@@ -70,7 +70,7 @@
   color: #333;
 }
 
-/* Pertinho de Você */
+
 .near-you-section {
   margin-bottom: 24px;
 }
@@ -96,21 +96,21 @@
 
 
 ion-toolbar {
-  --background: var(--ion-color-tertiary); /* Header usa a cor primária */
+  --background: var(--ion-color-tertiary);
   color: white;
 }
 
 ion-tab-bar {
-  --background: var(--ion-color-primary); /* Menu inferior usa a cor secundária */
+  --background: var(--ion-color-primary);
   --color: white;
 }
 
 ion-tab-button {
-  --color-selected: var(--ion-color-tertiary); /* Ícone selecionado usa a cor terciária */
+  --color-selected: var(--ion-color-tertiary); 
 }
 
 ion-button {
-  --background: var(--ion-color-tertiary); /* Botões chamativos usam a cor terciária */
+  --background: var(--ion-color-tertiary); 
   --color: white;
 }
 
