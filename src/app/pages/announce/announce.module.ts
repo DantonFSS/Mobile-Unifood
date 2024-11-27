@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { AnnouncePage } from './announce.page';
-import { HighlightDirective } from '../../directives/custom/itemHighLights.directive';
 import { RepeatElementDirective } from 'src/app/directives/structures/repeat.directive';
+import { HighlightDirective } from '../../directives/custom/itemHighLights.directive';
 
 
 @NgModule({
@@ -19,8 +19,8 @@ import { RepeatElementDirective } from 'src/app/directives/structures/repeat.dir
   ],
   declarations: [
     AnnouncePage,
-    HighlightDirective,
     RepeatElementDirective,
+    HighlightDirective
   ]
 })
 export class AnnouncePageModule {}

@@ -12,14 +12,14 @@ export class CartPage {
       description: 'Pizza com molho de tomate e queijo',
       price: 30,
       quantity: 1,
-      image: 'https://example.com/pizza.jpg',
+      image: 'https://www.simplyrecipes.com/thmb/pjYMLcsKHkr8D8tYixmaFNxppPw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg',
     },
     {
       name: 'Hambúrguer',
       description: 'Hambúrguer artesanal com batatas fritas',
       price: 20,
       quantity: 1,
-      image: 'https://example.com/burger.jpg',
+      image: 'https://www.cnnbrasil.com.br/viagemegastronomia/wp-content/uploads/sites/5/2024/05/TTBurger_021_Alta_CredTomasRangel-1.jpg?w=1024',
     },
   ];
 
@@ -31,12 +31,12 @@ export class CartPage {
   }
 
   increaseQuantity(item: any) {
-    item.quantity++;
+    item.quantity += 1;
   }
 
   decreaseQuantity(item: any) {
     if (item.quantity > 1) {
-      item.quantity--;
+      item.quantity -= 1;
     }
   }
 

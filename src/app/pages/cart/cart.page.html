@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Carrinho</ion-title>
+  <ion-toolbar color="secondary">
+    <ion-title appHighlight>Quais são seus produtos?</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,23 +16,50 @@
       <ion-label>
         <h2>{{ item.name }}</h2>
         <p>{{ item.description }}</p>
-        <h3>{{ (item.price * item.quantity) | currency }}</h3>
+        <h3>{{ (item.price * item.quantity | currency)}}</h3>
         <div class="quantity-controls">
-          <ion-button fill="outline" size="small" (click)="decreaseQuantity(item)" [disabled]="item.quantity === 1">-</ion-button>
+          <ion-button color="tertiary" fill="outline" size="small" (click)="decreaseQuantity(item)" [disabled]="item.quantity === 1">-</ion-button>
           <span>{{ item.quantity }}</span>
-          <ion-button fill="outline" size="small" (click)="increaseQuantity(item)">+</ion-button>
+          <ion-button color="tertiary" fill="outline" size="small" (click)="increaseQuantity(item)">+</ion-button>
         </div>
       </ion-label>
-      <ion-button (click)="removeItem(item)" color="danger" slot="end">Remover</ion-button>
+      <ion-button (click)="removeItem(item)" color="secondary" slot="end">Remover</ion-button>
     </ion-item>
 
     <ion-item>
       <ion-label>Total:</ion-label>
-      <ion-badge color="primary">{{ totalAmount | currency }}</ion-badge>
+      <ion-badge color="tertiary">{{ totalAmount | currency }}</ion-badge>
     </ion-item>
 
-    <ion-button expand="full" color="success" (click)="checkout()">Finalizar Compra</ion-button>
+    <ion-button expand="full" color="secondary" (click)="checkout()">Finalizar Compra</ion-button>
   </ion-list>
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" color="tertiary">
+      <ion-tab-button tab="home" routerLink="/home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Início</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="search" routerLink="/map">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-label>Busca</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="sell" routerLink="/announce">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <ion-label>Quero Vender!</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="messages">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+        <ion-label>Mensagens</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="cart" routerLink="/cart">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-label>Carrinho</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
 
   <ng-template #emptyCart>
     <ion-item>
