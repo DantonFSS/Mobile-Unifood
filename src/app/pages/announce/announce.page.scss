@@ -1,0 +1,56 @@
+ion-item {
+  --background: var(--ion-color-primary);
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.categories-section {
+  margin-bottom: 100px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.category-item {
+  flex: 1 0 21%; 
+  text-align: center;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 100px;
+  border: solid;
+  border-color: var(--ion-color-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 55px;
+}
+
+.category-icon {
+  font-size: 32px;
+  color: #ff6347;
+  margin-bottom: 8px;
+}
+
+.category-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.upload {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.upload-btn {
+  --border-color: var(--ion-color-tertiary);
+  --color: black;
+}
+
+.upload-hint {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
