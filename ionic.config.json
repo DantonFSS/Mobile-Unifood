@@ -3,5 +3,10 @@
   "integrations": {
     "capacitor": {}
   },
+  "plugins": {
+    "Keyboard": {
+      "resize": "none"
+    }
+  },
   "type": "angular"
 }

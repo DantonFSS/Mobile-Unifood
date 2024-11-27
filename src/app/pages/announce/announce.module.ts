@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-
+import { CurrencyBrlPipe } from '../../pipes/currency.pipe';
 import { AnnouncePage } from './announce.page';
+import { HighlightDirective } from '../../directives/custom/itemHighLights.directive';
+
 
 @NgModule({
   imports: [
@@ -15,6 +17,10 @@ import { AnnouncePage } from './announce.page';
       { path: '', component: AnnouncePage }
     ])
   ],
-  declarations: [AnnouncePage]
+  declarations: [
+    AnnouncePage,
+    CurrencyBrlPipe,
+    HighlightDirective,
+  ]
 })
 export class AnnouncePageModule {}

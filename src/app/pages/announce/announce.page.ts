@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./announce.page.scss']
 })
 export class AnnouncePage {
+
+  price: number | null = null;
+  
   constructor() {}
 
   categories = [
