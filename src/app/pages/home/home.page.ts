@@ -9,10 +9,10 @@ import Swiper from 'swiper';
 export class HomePage implements AfterViewInit {
 
   categories = [
-    { name: 'Doces', image: 'assets/images/doces.png' },
-    { name: 'Sanduíches', image: 'assets/images/sanduiches.png' },
-    { name: 'Pizzas', image: 'assets/images/pizzas.png' },
-    { name: 'Sorvete', image: 'assets/images/sorvetes.png'  },
+    { name: 'doces', image: 'assets/images/doces.png' },
+    { name: 'sanduíches', image: 'assets/images/sanduiches.png' },
+    { name: 'pizzas', image: 'assets/images/pizzas.png' },
+    { name: 'sorvete', image: 'assets/images/sorvetes.png'  },
   ];
   
   nearYouItems = [

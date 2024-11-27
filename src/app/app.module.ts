@@ -7,14 +7,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { CommonModule } from '@angular/common'; 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RepeatPipe } from './pipes/structure/repeat.pipe';
 import { VisibleDirective } from './directives/custom/visible.directive';
 import { RepeatElementDirective } from './directives/structures/repeat.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RepeatPipe,
     VisibleDirective,
     RepeatElementDirective,
   ],

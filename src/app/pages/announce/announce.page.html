@@ -9,18 +9,16 @@
 
 <ion-content>
   <ion-grid>
-
-
     <section class="categories-section">
       <h2 class="section-title">Categorias</h2>
       <div class="categories">
-        <div class="category-item" *ngFor="let category of categories">
-          <img [src]="category.image" [alt]="category.name" class="category-image" />
-          <p class="category-name">{{ category.name }}</p>
+        <div class="category-item" *appRepeat="categories.length; let index = index">
+          <img [src]="categories[index].image" [alt]="categories[index].name" class="category-image" />
+          <p class="category-name">{{ categories[index].name }}</p>
         </div>
       </div>
     </section>
-
+    
 
     <ion-row>
       <ion-col size="12">
@@ -34,16 +32,10 @@
         </ion-item>
         <h2 class="title">Preço (R$)</h2>
         <ion-item>
-          <ion-input
-            type="text"
-            placeholder="Ex: 25.90"
-            appCurrencyBrlMask
-          ></ion-input>
-          <p *ngIf="price !== null">{{ price | currencyBrl }}</p>
+          <ion-input type="number" placeholder="Ex: 25.90"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
-
 
     <ion-row>
       <ion-col size="12" class="upload">
@@ -55,14 +47,13 @@
       </ion-col>
     </ion-row>
 
-
     <ion-row>
       <ion-col size="12">
         <ion-button expand="block" color="tertiary">Anunciar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
-  
+
   <ion-tabs>
     <ion-tab-bar slot="bottom" color="secondary">
       <ion-tab-button tab="home" routerLink="/home">
@@ -79,12 +70,4 @@
       </ion-tab-button>
       <ion-tab-button tab="messages">
         <ion-icon name="chatbubbles-outline"></ion-icon>
-        <ion-label>Mensagens</ion-label>
-      </ion-tab-button>
-      <ion-tab-button tab="cart" routerLink="/cart">
-        <ion-icon name="cart-outline"></ion-icon>
-        <ion-label>Carrinho</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-</ion-content>
+        

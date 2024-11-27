@@ -16,10 +16,11 @@
       <div class="categories">
         <div class="category-item" *ngFor="let category of categories">
           <img [src]="category.image" [alt]="category.name" class="category-image" />
-          <p class="category-name">{{ category.name }}</p>
+          <p class="category-name">{{ category.name | capitalize }}</p>
         </div>
       </div>
     </section>
+    
 
     <section class="near-you-section">
       <h2 class="section-title">Pertinho de você</h2>

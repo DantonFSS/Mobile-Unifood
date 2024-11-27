@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { CurrencyBrlPipe } from '../../pipes/currency.pipe';
 import { AnnouncePage } from './announce.page';
 import { HighlightDirective } from '../../directives/custom/itemHighLights.directive';
+import { RepeatElementDirective } from 'src/app/directives/structures/repeat.directive';
 
 
 @NgModule({
@@ -19,8 +19,8 @@ import { HighlightDirective } from '../../directives/custom/itemHighLights.direc
   ],
   declarations: [
     AnnouncePage,
-    CurrencyBrlPipe,
     HighlightDirective,
+    RepeatElementDirective,
   ]
 })
 export class AnnouncePageModule {}
