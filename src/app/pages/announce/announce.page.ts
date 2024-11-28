@@ -7,16 +7,13 @@ import { HttpClient } from '@angular/common/http'; // Import HttpClient
   styleUrls: ['./announce.page.scss'],
 })
 export class AnnouncePage {
-  // Variables to hold form inputs
-  newProduct = {
-    title: '',
+  newItem = {
+    name: '',
     description: '',
     price: null,
-    category: '',
-    image: '', // Optional field for uploaded image URL
+    url: '', 
   };
 
-  // Available categories
   categories = [
     { name: 'Doces', image: 'assets/images/doces.png' },
     { name: 'Sanduíches', image: 'assets/images/sanduiches.png' },
@@ -26,41 +23,31 @@ export class AnnouncePage {
 
   constructor(private http: HttpClient) {}
 
-  // Save a new product
-  onAddProduct() {
-    // Ensure all required fields are filled
-    if (
-      !this.newProduct.title ||
-      !this.newProduct.description ||
-      !this.newProduct.price ||
-      !this.newProduct.category
-    ) {
+  onAddItem() {
+    if (!this.newItem.name || !this.newItem.description || !this.newItem.price) {
       alert('Por favor, preencha todos os campos obrigatórios.');
       return;
     }
 
-    // Send the product data to the backend or local storage
-    this.http.post('https://mockapi.io/api/v1/products', this.newProduct).subscribe({
+    this.http.post('http://localhost:8080/api/v1/items/create', this.newItem).subscribe({
       next: (response) => {
-        console.log('Product added successfully:', response);
-        alert('Produto anunciado com sucesso!');
-        this.resetForm(); // Clear the form after saving
+        console.log('Item created successfully:', response);
+        alert('Item anunciado com sucesso!');
+        this.resetForm();
       },
       error: (error) => {
-        console.error('Error adding product:', error);
-        alert('Ocorreu um erro ao anunciar o produto.');
+        console.error('Error creating item:', error);
+        alert('Ocorreu um erro ao anunciar o item.');
       },
     });
   }
 
-  // Reset the form
   resetForm() {
-    this.newProduct = {
-      title: '',
+    this.newItem = {
+      name: '',
       description: '',
       price: null,
-      category: '',
-      image: '',
+      url: '',
     };
   }
 }
