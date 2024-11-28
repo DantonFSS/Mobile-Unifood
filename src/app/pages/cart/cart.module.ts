@@ -19,7 +19,7 @@ import { HighlightDirective } from '../../directives/custom/itemHighLights.direc
   ],
   declarations: [
     CartPage, 
-    HighlightDirective,
+    //HighlightDirective,
   ]
 })
 export class CartPageModule {}
