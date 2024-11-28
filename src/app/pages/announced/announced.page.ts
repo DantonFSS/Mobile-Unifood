@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Item } from 'src/app/models/item.model'; 
 
 @Component({
   selector: 'app-announced',
@@ -7,22 +8,22 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./announced.page.scss'],
 })
 export class AnnouncedPage implements OnInit {
-  announcedProducts: any[] = [];
+  announcedItems: Item[] = []; 
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.loadAnnouncedProducts();
+    this.loadAnnouncedItems();
   }
 
-  loadAnnouncedProducts() {
-    this.http.get('https://mockapi.io/api/v1/products').subscribe({
-      next: (data: any) => {
-        this.announcedProducts = data;
-        console.log('Announced products:', this.announcedProducts);
+  loadAnnouncedItems() {
+    this.http.get<Item[]>('http://localhost:8080/api/v1/items/all').subscribe({
+      next: (data) => {
+        this.announcedItems = data; 
+        console.log('Announced items:', this.announcedItems);
       },
       error: (error) => {
-        console.error('Error fetching announced products:', error);
+        console.error('Error fetching announced items:', error);
       },
     });
   }
