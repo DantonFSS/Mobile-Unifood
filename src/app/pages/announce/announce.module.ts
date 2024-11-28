@@ -20,7 +20,7 @@ import { HighlightDirective } from '../../directives/custom/itemHighLights.direc
   declarations: [
     AnnouncePage,
     RepeatElementDirective,
-    HighlightDirective
+    //HighlightDirective
   ]
 })
 export class AnnouncePageModule {}
