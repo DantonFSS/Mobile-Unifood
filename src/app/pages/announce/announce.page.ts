@@ -29,7 +29,7 @@ export class AnnouncePage {
       return;
     }
 
-    this.http.post('http://localhost:8080/api/v1/items/create', this.newItem).subscribe({
+    this.http.post('http://bcknd:8080/api/v1/items/create', this.newItem).subscribe({
       next: (response) => {
         console.log('Item created successfully:', response);
         alert('Item anunciado com sucesso!');

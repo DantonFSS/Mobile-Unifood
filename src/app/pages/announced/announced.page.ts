@@ -17,7 +17,7 @@ export class AnnouncedPage implements OnInit {
   }
 
   loadAnnouncedItems() {
-    this.http.get<Item[]>('http://localhost:8080/api/v1/items/all').subscribe({
+    this.http.get<Item[]>('http://bcknd:8080/api/v1/items/all').subscribe({
       next: (data) => {
         this.announcedItems = data; 
         console.log('Announced items:', this.announcedItems);
